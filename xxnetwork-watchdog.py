@@ -15,7 +15,7 @@ def telegram_bot_sendtext(bot_msg):
 def getStatus():
     status = []
     for p in psutil.process_iter(['name', 'status']):
-        if p.info['name'].find('xxnetwork') >= 0 and p.info['status'] in good_status:
+        if p.info['name'].find('xxnetwork') >= 0 and p.info['status'] not in good_status:
             status.append(p.info)
     return status
 
