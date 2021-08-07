@@ -8,8 +8,8 @@ Python3 script to check whether processes `xxnetwork-node` and `xxnetwork-gatewa
 # Requirements
 
 ## Python3 packages
-pip3 install -r requirements.txt
-sudo apt-get install python3-psutil
+* pip3 install -r requirements.txt
+* sudo apt-get install python3-psutil
 
 ## Telegram bot
 @BotFather - https://core.telegram.org/bots
