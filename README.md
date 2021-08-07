@@ -24,4 +24,4 @@ sudo apt-get install python3-psutil
 `sudo systemctl status xxnetwork-watchdog.service`
 
 # How to restart watchdog service
-`sudo systemctl service xxnetwork-watchdog.service`
+`sudo systemctl restart xxnetwork-watchdog.service`
