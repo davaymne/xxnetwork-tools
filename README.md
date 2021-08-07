@@ -21,7 +21,7 @@ sudo apt-get install python3-psutil
 4. Enable service `sudo systemctl enable xxnetwork-gateway.service`
 
 # How to check service status
-`sudo systemctl status xxnetwork-gateway.service`
+`sudo systemctl status xxnetwork-watchdog.service`
 
 # How to restart watchdog service
-`sudo systemctl service xxnetwork-gateway.service`
+`sudo systemctl service xxnetwork-watchdog.service`
