@@ -21,7 +21,6 @@ def getStatus():
 
 def restartProcess(cmd):
     try:
-        print(cmd)
         subprocess.check_call(cmd)
     except subprocess.CalledProcessError as e:
         print(e.returncode)
