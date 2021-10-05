@@ -67,9 +67,10 @@ def main():
         response = getNodeStatus(args.api)
         online, offline, error, other, node_status = parseResponse(response, args)
         online_rate = online / (online + offline + error + other)
+        logging.info('XXNetwork: Node {} status is {}. Overall online is {:.2%}'.format(args.node_name, node_status, online_rate))
         if node_status != 'online':
-            logging.info('XXNetwork: Node {} status is {}. Overall online is {:.2%}'.format(args.node_name, node_status, online_rate))
-            telegram_bot_sendtext('XXNetwork: Node {} status is {}. Overall online is {:.2%}'.format(args.node_name, node_status, online_rate))
+            logging.info('XXNetwork: Node {} status is {}. Overall offline is {:.2%}'.format(args.node_name, node_status, (1 - online_rate)))
+            telegram_bot_sendtext('XXNetwork: Node {} status is {}. Overall offline is {:.2%}'.format(args.node_name, node_status, (1 - online_rate)))
         time.sleep(600)
 
 if __name__ == "__main__":
